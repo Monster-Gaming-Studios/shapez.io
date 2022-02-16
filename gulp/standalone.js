@@ -198,8 +198,8 @@ function gulptasksStandalone($, gulp) {
         }
 
         gulp.task(taskPrefix + "standalone.package.prod.win64", cb => packageStandalone("win32", "x64", cb));
-        gulp.task(taskPrefix + "standalone.package.prod.linux64", cb =>
-            packageStandalone("linux", "x64", cb)
+        gulp.task(taskPrefix + "standalone.package.prod.linuxarmv7l", cb =>
+            packageStandalone("linux", "armv7l", cb)
         );
 
         gulp.task(
@@ -208,7 +208,7 @@ function gulptasksStandalone($, gulp) {
                 taskPrefix + "standalone.prepare",
                 gulp.parallel(
                     taskPrefix + "standalone.package.prod.win64",
-                    taskPrefix + "standalone.package.prod.linux64"
+                    taskPrefix + "standalone.package.prod.linuxarmv7l"
                 )
             )
         );
