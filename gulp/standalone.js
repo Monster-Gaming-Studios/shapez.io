@@ -128,7 +128,7 @@ function gulptasksStandalone($, gulp) {
         /**
          *
          * @param {'win32'|'linux'} platform
-         * @param {'x64'|'ia32'} arch
+         * @param {'x64'|'ia32'|'armv7l'} arch
          * @param {function():void} cb
          */
         function packageStandalone(platform, arch, cb) {
